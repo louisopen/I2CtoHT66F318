@@ -1,0 +1,249 @@
+
+Linker Version 8.7.7.190806
+Input Object File: C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\STARTUP1_L.OBJ
+Input Object File: C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ
+Input Object File: C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ
+Input Object File: C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ
+Input Object File: C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ)
+     00h     0001h     0001h    0001h      CODE               @start (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ)
+     00h     0002h     0003h    0002h      CODE               _Key_Scan (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     0004h     0004h    0001h      CODE               @INT0_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0005h     0005h    0001h      CODE               _i2c_manage (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     0008h     0008h    0001h      CODE               @Comparator_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     000ch     000fh    0004h      CODE               @MuFunction0_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0014h     0017h    0004h      CODE               @MuFunction2_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0018h     0018h    0001h      CODE               @ADC_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     001ch     001fh    0004h      CODE               @Timebase0_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0020h     0023h    0004h      CODE               @Timebase1_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0024h     0024h    0001h      CODE               @INT1_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0028h     002bh    0004h      CODE               @I2C_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     002ch     002ch    0001h      CODE               @UART_ISR_code (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     002dh     003ch    0010h      CODE               _main (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ)
+     00h     003dh     004bh    000fh      CODE               _MuFunction0_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     004ch     0053h    0008h      CODE               _MuFunction2_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0054h     0058h    0005h      CODE               _Timebase0_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     0059h     005dh    0005h      CODE               _Timebase1_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     005eh     0071h    0014h      CODE               _Task_500ms (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     0072h     007dh    000ch      CODE               _TimerInitial (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     007eh     0082h    0005h      CODE               _ReadyToHalt (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     0083h     0089h    0007h      CODE               _GPIO_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     008ah     0092h    0009h      CODE               _WDT_ResetInit (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     0093h     00ach    001ah      CODE               _Ram_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00adh     00bbh    000fh      CODE               _PowerOn_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00bch     00c6h    000bh      CODE               _init_i2c (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c7h     00cdh    0007h      CODE               _i2c_off (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00ceh     011bh    004eh      CODE               _I2C_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     011ch     0120h    0005h      CODE               _CROM2PROM (CROM2PROM)
+     00h     00a0h     00a2h    0003h      DATA     1.6667    @HCCINIT0 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00a3h     00a4h    0002h      DATA     5         @HCCINIT0 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00a5h     00b6h    0012h      DATA     0.3888    @HCCINIT0 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00b7h     00b7h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b8h     00b8h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     00b9h     00b9h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+     00h     00bah     00bah    0001h      DATA     2         @data_r114 (isr:ra~rh)
+     00h     00bbh     00bbh    0001h      DATA     2         @data_r214 (isr:ra~rh)
+     00h     00bch     00bch    0001h      DATA     2         @data_ra14 (isr:ra~rh)
+     00h     00bdh     00bdh    0001h      DATA     2         @data_r11c (isr:ra~rh)
+     00h     00beh     00beh    0001h      DATA     2         @data_r21c (isr:ra~rh)
+     00h     00bfh     00bfh    0001h      DATA     2         @data_r120 (isr:ra~rh)
+     00h     00c0h     00c0h    0001h      DATA     2         @data_r220 (isr:ra~rh)
+     00h     00c1h     00c1h    0001h      DATA     2         @data_r128 (isr:ra~rh)
+     00h     00c2h     00c2h    0001h      DATA     2         @data_r228 (isr:ra~rh)
+     00h     00c3h     00c3h    0001h      DATA     2         @data_r328 (isr:ra~rh)
+     00h     00c4h     00c4h    0001h      DATA     2         @data_r428 (isr:ra~rh)
+     00h     00c5h     00c5h    0001h      DATA     2         @data_r528 (isr:ra~rh)
+     00h     00c6h     00c6h    0001h      DATA     2         @data_r628 (isr:ra~rh)
+     00h     00c7h     00c7h    0001h      DATA     2         @data_r728 (isr:ra~rh)
+     00h     00c8h     00c8h    0001h      DATA     6         @data_ra28 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _main (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _PowerOn_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Ram_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _WDT_ResetInit (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _GPIO_Init (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _TimerInitial (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _init_i2c (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _i2c_manage (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _ReadyToHalt (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _i2c_off (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Task_500ms (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Key_Scan (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\SYS_INIT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy12 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _MuFunction0_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy20 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _MuFunction2_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy28 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Timebase0_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy32 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Timebase1_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\INTERRUPT.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         @dummy40 (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _I2C_ISR (C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\I2C.OBJ)
+     00h     00c9h     00c9h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+
+     Public Symbols Information
+     Address            Public by Name
+     0018h              _ADC_ISR
+     0008h              _Comparator_ISR
+     011dh              _Crom2Prom
+     011ch              _Crom2PromNext
+     0083h              _GPIO_Init
+     00ceh              _I2C_ISR
+     0004h              _INT0_ISR
+     0024h              _INT1_ISR
+     0002h              _Key_Scan
+     003dh              _MuFunction0_ISR
+     004ch              _MuFunction2_ISR
+     00adh              _PowerOn_Init
+     0093h              _Ram_Init
+     007eh              _ReadyToHalt
+     005eh              _Task_500ms
+     0054h              _Timebase0_ISR
+     0059h              _Timebase1_ISR
+     0072h              _TimerInitial
+     002ch              _UART_ISR
+     008ah              _WDT_ResetInit
+     00a4h              _count_2sec
+     0005h              _i2c_manage
+     00c7h              _i2c_off
+     00bch              _init_i2c
+     00a2h              _interrupt_flag
+     00a1h              _isr_temp0
+     002dh              _main
+     00a5h              _rx_iic
+     00b5h              _rx_iic_count
+     00a0h              _rx_watchdog
+     00a3h              _system_flag
+     00adh              _tx_iic
+     00b6h              _tx_iic_count
+     00b8h              r10c
+     00bah              r114
+     00bdh              r11c
+     00bfh              r120
+     00c1h              r128
+     00b9h              r20c
+     00bbh              r214
+     00beh              r21c
+     00c0h              r220
+     00c2h              r228
+     00c3h              r328
+     00c4h              r428
+     00c5h              r528
+     00c6h              r628
+     00c7h              r728
+     00b7h              ra
+     00bch              ra14
+     00c8h              ra28
+
+     Address            Public by Value
+     0002h              _Key_Scan
+     0004h              _INT0_ISR
+     0005h              _i2c_manage
+     0008h              _Comparator_ISR
+     0018h              _ADC_ISR
+     0024h              _INT1_ISR
+     002ch              _UART_ISR
+     002dh              _main
+     003dh              _MuFunction0_ISR
+     004ch              _MuFunction2_ISR
+     0054h              _Timebase0_ISR
+     0059h              _Timebase1_ISR
+     005eh              _Task_500ms
+     0072h              _TimerInitial
+     007eh              _ReadyToHalt
+     0083h              _GPIO_Init
+     008ah              _WDT_ResetInit
+     0093h              _Ram_Init
+     00a0h              _rx_watchdog
+     00a1h              _isr_temp0
+     00a2h              _interrupt_flag
+     00a3h              _system_flag
+     00a4h              _count_2sec
+     00a5h              _rx_iic
+     00adh              _PowerOn_Init
+     00adh              _tx_iic
+     00b5h              _rx_iic_count
+     00b6h              _tx_iic_count
+     00b7h              ra
+     00b8h              r10c
+     00b9h              r20c
+     00bah              r114
+     00bbh              r214
+     00bch              _init_i2c
+     00bch              ra14
+     00bdh              r11c
+     00beh              r21c
+     00bfh              r120
+     00c0h              r220
+     00c1h              r128
+     00c2h              r228
+     00c3h              r328
+     00c4h              r428
+     00c5h              r528
+     00c6h              r628
+     00c7h              _i2c_off
+     00c7h              r728
+     00c8h              ra28
+     00ceh              _I2C_ISR
+     011ch              _Crom2PromNext
+     011dh              _Crom2Prom
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     0112h    6%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0060h     0029h    42%
+     01h       0060h     0000h    0%
+     Total     00c0h     0029h    21%
+
+Use Stack Count
+_main: 2
+_MuFunction0_ISR: 0
+_MuFunction2_ISR: 0
+_Timebase0_ISR: 0
+_Timebase1_ISR: 0
+_I2C_ISR: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _PowerOn_Init (1)
+                _Ram_Init (2)
+            _WDT_ResetInit (1)
+                _GPIO_Init (2)
+                _TimerInitial (2)
+                _init_i2c (2)
+            _i2c_manage (1)
+            _ReadyToHalt (1)
+                _i2c_off (2)
+                _init_i2c (2)
+            _Task_500ms (1)
+            _Key_Scan (1)
+    @dummy12
+        _MuFunction0_ISR (0)
+    @dummy20
+        _MuFunction2_ISR (0)
+    @dummy28
+        _Timebase0_ISR (0)
+    @dummy32
+        _Timebase1_ISR (0)
+    @dummy40
+        _I2C_ISR (0)
+            _Crom2Prom (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\ChipsGarden\醇法\MK8000\MK8000-Power PCB\I2CtoHT66F318\I2CtoHT66F318\MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
