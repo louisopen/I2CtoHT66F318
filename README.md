@@ -1,19 +1,15 @@
-### I2C slave with HT66F318 applications
+## I2C slave with HT66F318 applications
+Using the host I2C access GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...via HT66F318 I2C port(Slave address 0x27)<br>
+å°ˆæ¡ˆåˆ©ç”¨PC or Raspberry Pi or Arduino è»Ÿä»¶ä¸»æ§é€šéI2Cä¸‹é”é€šè¨ŠæŒ‡ä»¤ä»¥å­˜å–HT66F318(Slave address 0x27)çš„GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...<br>
 
-Using the host I2C access to HT66F318(Slave address 0x27) GPIO port, EEPROM(64bytes), 
-ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...
-±M®×§Q¥ÎPC or Raspberry Pi or Arduino ³n¥ó¥D±±¤U¹FI2C³q°T«ü¥O¥H¦s¨úHT66F318(Slave address 0x27)
-GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...
+åœ¨MCUè³‡æºä¸è¶³æˆ–æ˜¯æ‡‰ç”¨è£ç½®ç¼ºä¹æ™‚, Hostå³å¯é€éI2Cä¾†æ§åˆ¶é€™å€‹è£ç½®è€ŒæŠŠUARTç•¶æˆprint for debug.<br>
+Project Option: HIRC8M (hi speed internal RC); å¯é¸é …é‚„æœ‰(å°å¿ƒä½¿ç”¨)HXT,HIRC8M,HIRC12M,HIRC16M,LXT,LIRC<br>
 
-¦bMCU¸ê·½¤£¨¬©Î¬OÀ³¥Î¸Ë¸m¯Ê¥F®É, §Y¥i¥H»s³y¦Û¤vªºÀ³¥Î¸Ë¸m, Host§Y¥i³z¹LI2C¨Ó±±¨î³o­Ó¸Ë¸m
-§âUART·í¦¨debug print.
+HT66F318 28ssop with HT-IDE3000 V8.02 & e-Link & e-WriterPro<br>
+[HT66F318 Document](https://www.holtek.com.tw/search?key=ht66F318)<br>
+[IDE3000 & ICE & Writer](https://www.holtek.com.tw/ice)<br>
 
-#### relevant information:
-
-Tools: HT66F318 28ssop with HT-IDE3000 V8.02 & e-Link
-
-Project Option: HIRC8M (hi speed internal RC);¥i¿ï¶µHXT,HIRC8M,HIRC12M,HIRC16M,LXT,LIRC
-
+### Relevant information
 * HT-IDE3000 V8.02
 ![Image](HT-IDE3000_version.jpg)
 * HOLTEK C Compiler V3/Assembly
@@ -23,18 +19,14 @@ Project Option: HIRC8M (hi speed internal RC);¥i¿ï¶µHXT,HIRC8M,HIRC12M,HIRC16M,L
 ![Image](ProjectOption2.jpg)
 ![Image](ProjectOption3.jpg)
 ![Image](ProjectOption4.jpg)
-* HT66F318 28ssop Diagram
+* HT66F318 28ssop Schematic Diagram
 ![Image](CircuitDiagram.jpg)
 
-
-#### How to test or used:
-
+### How to test or used
 Using PC or Raspberry Pi or Arduino Host software control I2C of MCU (Slave address 0x27)
 * For Example: 
 * I2C Formate: @27 44 55
 
-
-#### Other applications:
-
+### Other applications:
 * 
 
