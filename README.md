@@ -1,4 +1,4 @@
-## I2C slave with HT66F318 applications
+## ※I2C slave with HT66F318 applications
 Using the host I2C access GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...via HT66F318 I2C port(Slave address 0x27)<br>
 專案利用PC or Raspberry Pi or Arduino 軟件主控通過I2C下達通訊指令以存取HT66F318(Slave address 0x27)的GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...<br>
 
