@@ -1,13 +1,22 @@
-## â€»I2C slave with HT66F318 applications
-Using the host I2C access GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...via HT66F318 I2C port(Slave address 0x27)<br>
-å°ˆæ¡ˆåˆ©ç”¨PC or Raspberry Pi or Arduino è»Ÿä»¶ä¸»æ§é€šéI2Cä¸‹é”é€šè¨ŠæŒ‡ä»¤ä»¥å­˜å–HT66F318(Slave address 0x27)çš„GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...<br>
+## ¡°I2C slave with HT66F318 applications
+* Using the host I2C access GPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...via HT66F318 I2C port(Slave address 0x27)<br>
+* ±M®×§Q¥ÎPC or Raspberry Pi or Arduino ³n¥ó¥D±±³q¹LI2C¤U¹F³q°T«ü¥O¥H¦s¨úHT66F318(Slave address 0x27)ªºGPIO port, EEPROM(64bytes), ADC(8ch 12bits), PWM output(10bit), Capture, OLED display...<br>
+* ¦bMCU¸ê·½¤£¨¬©Î¬OÀ³¥Î¸Ë¸m¯Ê¥F®É, Host§Y¥i³z¹LI2C¨Ó±±¨î³o­Ó¸Ë¸m¦Ó§âUART·í¦¨print for debug.<br>
 
-åœ¨MCUè³‡æºä¸è¶³æˆ–æ˜¯æ‡‰ç”¨è£ç½®ç¼ºä¹æ™‚, Hostå³å¯é€éI2Cä¾†æ§åˆ¶é€™å€‹è£ç½®è€ŒæŠŠUARTç•¶æˆprint for debug.<br>
-Project Option: HIRC8M (hi speed internal RC); å¯é¸é …é‚„æœ‰(å°å¿ƒä½¿ç”¨)HXT,HIRC8M,HIRC12M,HIRC16M,LXT,LIRC<br>
+* Project Option: <br>
+HIRC8M (hi speed internal RC); ¥i¿ï¶µ¦³:HXT(400K~16Mhz),HIRC8M,HIRC12M,HIRC16M<br>
+LICR (Low speed internal RC for TB0/TB1); ¥i¿ï¶µ¦³:LXT(32.768Khz),LIRC(32Khz)<br>
 
-HT66F318 28ssop with HT-IDE3000 V8.02 & e-Link & e-WriterPro<br>
-[HT66F318 Document](https://www.holtek.com.tw/search?key=ht66F318)<br>
-[IDE3000 & ICE & Writer](https://www.holtek.com.tw/ice)<br>
+* TB0,1 enable LIRC interrupt for 0.514sec, 0.514sec<br>
+
+* TM0 enable HIRC8M interrupt for around 200us<br>
+
+* I2C slave(address 0x27)
+
+* HT-IDE3000 HT66F317/HT66F318 28ssop with HT-IDE3000 & e-Link & e-WriterPro<br>
+¤å¥ó[HT66F318 Document](https://www.holtek.com.tw/search?key=ht66F318)<br>
+¼ÒÀÀ&°£¿ùDevelopment & Debug[IDE3000 & ICE](https://www.holtek.com.tw/web/guest/ice)<br>
+¿N¤J¾¹Progrmming & writer[HOPE3000 & e-WriterPro](https://www.holtek.com.tw/web/guest/programmer)<br>
 
 ### Relevant information
 * HT-IDE3000 V8.02
