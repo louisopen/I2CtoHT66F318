@@ -30,6 +30,8 @@ LICR (Low speed internal RC for TB0/TB1); 可選項有:LXT(32.768Khz),LIRC(32Khz)<br
 ![Image](ProjectOption4.jpg)
 * HT66F318 28ssop Schematic Diagram
 ![Image](CircuitDiagram.jpg)
+![Image](MCUdiagram.jpg)
+
 
 ### How to test or used
 Using PC or Raspberry Pi or Arduino Host software control I2C of MCU (Slave address 0x27)
