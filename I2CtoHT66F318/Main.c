@@ -13,6 +13,7 @@
 //___________________________________________________________________
 #include "common.h"
 
+unsigned char Port0, Port1;
 //___________________________________________________________________
 //___________________________________________________________________
 //___________________________________________________________________
@@ -29,7 +30,6 @@ void main()
 		WDT_ResetInit();	
 	}
 	//sleep_request=1;					//test sleep request
-	//Uart_TXD_Send(0xabcd);			//test for TXD single 
 	while(1)	//like Arduino loop() for main loop
 	{	
 		//GCC_CLRWDT();		//Clear Watchdog

@@ -14,7 +14,7 @@
 #include "common.h"
 
 unsigned char count_2sec;
-__byte_type	system_flag;
+volatile __byte_type	system_flag;
 
 //___________________________________________________________________
 //Function: Time base timer task process
@@ -35,12 +35,12 @@ void Task_500ms()
 	if(toggle_led==0)
 	{
 		toggle_led=1;
-		IO_test=1;	//_pa0=1;
+		LED_slow=1;	//_pa0=1;
 	}
 	else
 	{
 		toggle_led=0;
-		IO_test=0;	//_pa0=0;
+		LED_slow=0;	//_pa0=0;
 	}
 }
 
@@ -68,8 +68,10 @@ void TimerInitial()
 	//TimeModule0 can using STM 16bits(ht66f318) MuFunction0 ISR
 	_tm0c0 = 0b00000000; 		//fsys/4
 	_tm0c1 = 0xC1; 				//Compare with CCRA
-	_tm0al = 0x90; 				//CCRA比較值設置16bits(ht66f318)
-	_tm0ah = 0x01;				//3KHz for Buzzer
+	//_tm0al = 0x90; 				//CCRA比較值設置16bits(ht66f318) @HIRC8M
+	//_tm0ah = 0x01;				//5KHz for Buzzer or other
+	_tm0al = 0x58; 				//CCRA比較值設置16bits(ht66f318) @HIRC12M
+	_tm0ah = 0x02;				//5KHz for Buzzer or other
 	_tm0rp = 0x00;				//CCRP比較值只能設置高8bits(ht66f318)
 	_t0ae = 1;					//interrupt for CCRA
 	//_t0pe = 1;					//interrupt for CCRP
@@ -190,24 +192,24 @@ void GPIO_Init()
 	_scomc=0B00000000;	//binding IO  ...SCOMEN,pb5,pb6,pa3,pa1 see you
 	_cpc=0B00001001;	//binding IO  (pb5,pb6,pa3) see you
 	
-	_pac = 0b00000000;		//PA0 timer LED, PA7 binding TP1(TM1) Capture input
+	_pac = 0b10000101;		//PA0/PA3 timer LED, PA7 binding TP1(TM1) Capture input
 	//_papu = 0b11111111;	//default is 0(disable).
 	//_pawu = 0b00000000; 	//default is 0(disable).
 	_pa = 0x00;
 
-	_pbc = 0b00000001;		//pb0 for an0, pb1 for Test, pb2 for buzzer, PB3(TP2) for PWM
-	//_pbpu =   0b11111110;	//default is 0(disable).	
+	_pbc = 0b11110001;		//pb0 for an0, pb1 for Test, pb2 for buzzer, PB3(TP2) for PWM
+	//_pbpu = 0b11111110;	//default is 0(disable).	
 	_pb = 0x01;
-	/*
-	_pcc = 0xff;
-	_pcpu = 0b11111111;		//default is 0(disable).	
-	_pc = 0;
-	*/
+	
+	//_pcc = 0xff;
+	_pcpu = 0b11110000;		//default is 0(disable).	
+	//_pc = 0;
+	
 	/*
 	//only for ht66f318
 	_pdc = 0;
 	_pdpu = 0;		
-	_pd = 0;	
+	_pd = 0;
 	*/	
 }
 //___________________________________________________________________

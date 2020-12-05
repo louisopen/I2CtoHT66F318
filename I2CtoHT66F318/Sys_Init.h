@@ -15,16 +15,16 @@
 #define _SYS_INIT_H_
 
 extern unsigned char  	count_2sec;
+extern volatile __byte_type	system_flag;
 
-void PowerOn_Init(), WDT_ResetInit(), ReadyToHalt();
-void GPIO_Init(), Ram_Init(), Task_500ms(), Key_Scan();
+extern void PowerOn_Init(), WDT_ResetInit(), GPIO_Init(), Ram_Init(), ReadyToHalt();
+extern void Task_500ms(), Key_Scan();
 
 //___________________________________________________________________
 //___________________________________________________________________
 //  HIRC可選頻率有(options HXT or HIRC)
 //  4000000，8000000，120000  by hardware option if select HIRC
 #define OSC_Frequency		8000000
-
 
 //-------------SMOD config--------------
 //  ______________________________________________________________________________

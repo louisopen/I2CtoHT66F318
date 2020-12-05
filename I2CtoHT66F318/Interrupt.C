@@ -14,8 +14,8 @@
 #include "common.h"
 
 volatile __byte_type	interrupt_flag;
-u8 isr_temp0;
-u8 rx_watchdog;
+
+//u8 rx_watchdog;
 //___________________________________________________________________
 //Function: INT0 ISR
 //NOTE	  :   
@@ -48,7 +48,7 @@ void __attribute((interrupt(0x0c)))  MuFunction0_ISR()	//for V3 of compiler
 	/////// TimeModule0 on Mult-Function 0 ISR ////////////
 	if(_t0af)
 	{
-		rx_watchdog++;	//For UART RX watchdog.
+		//rx_watchdog++;	//For UART RX watchdog.
 		if(toggle_buzzer==0)
 		{
 			toggle_buzzer=1;

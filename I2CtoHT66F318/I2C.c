@@ -15,7 +15,6 @@
 
 u8	tx_iic_count, rx_iic_count;
 u8	tx_iic[8], rx_iic[8];
-void init_i2c(void), i2c_off(void), i2c_manage(void);
 //___________________________________________________________________
 //Function: Init i2C and I2C off
 //   INPUT: 
@@ -32,10 +31,12 @@ void init_i2c(void)					//initial I2C
 	//_i2cdbnc0 =1;		//debounce 2clock	
 	_i2cdbnc1 =1;		//debounce 4clock
 	
-	_i2ctoc = 0x00;		//I2C Time out reg. disable
+	//_i2ctoc = 0x00;		//I2C Time out reg. disable
+	_i2ctoc = 0B10111111;	//I2C Time out reg. MAX
 	
 	_iicen = 1;			//enable i2c
-	_iica = DeviceAddr;	//set i2c slave address 0x27
+	_iica = DeviceAddr << 1;	//set i2c slave address 0x27
+	_iicf = 0;
 	_iice = 1;			//ii2 interrupt enable
 	//_emi  = 1;		//Global enable interrupt 
 }
@@ -53,10 +54,10 @@ void i2c_off(void)		//initial I2C
 //Function: I2C ISR (Only for HT66F318)
 //NOTE    : 
 //___________________________________________________________________
-DEFINE_ISR(I2C_ISR, 0x28)							//for V3 of compiler
-//#pragma vector I2C_ISR @ 0x28
+//DEFINE_ISR(I2C_ISR, 0x28)							//for V1 of compiler
+//#pragma vector I2C_ISR @ 0x28						//for V2 of compiler
 //void I2C_ISR(void)
-//void __attribute((interrupt(0x28)))  I2C_ISR()	//for V3 of compiler
+void __attribute((interrupt(0x28)))  I2C_ISR()	//for V3 of compiler
 {
 	if(_iichaas)
 	{//_haas=1,address match trig interrupt
@@ -78,13 +79,13 @@ DEFINE_ISR(I2C_ISR, 0x28)							//for V3 of compiler
 	else
 	{//_haas=0,data trig interrupt
 		if(_iichtx)
-		{//htx=1:slave in write state;
+		{//htx=1:slave in write data;
 			if(_iicrxak)
 			{//rxak=1:master stop receiving next byte,master releases scl bus
 				_iichtx = 0;
 				_iictxak = 0;	
 				_acc = _iicd;		//dummy read from IICD to release scl line
-				//rx_iic = _acc;
+				//rx_iic = _acc;				
 			}
 			else
 			{//rxak=0:master wants to receive next byte;	
@@ -93,11 +94,27 @@ DEFINE_ISR(I2C_ISR, 0x28)							//for V3 of compiler
 			}			
 		}
 		else
-		{//htx=0:slave in read state
+		{//htx=0:slave in read data
 			rx_iic[rx_iic_count] = _iicd;	
 			rx_iic_count++;	
-			_iictxak = 0;				
+			_iictxak = 0;
+			
+			if (rx_iic_count>=DataCount){ 	//copy for applications 
+				i2c_rx_success=1;
+				for(tx_iic_count=0; tx_iic_count<DataCount; tx_iic_count++)
+					tx_iic[tx_iic_count] = rx_iic[tx_iic_count];
+			}			
 		}
+		/*
+		if(edge_int_flag)		//test "每收到一個byte" toggle output
+		{	edge_int_flag=0;
+			IO_test=0;
+		}
+		else
+		{	edge_int_flag=1;
+			IO_test=1;
+		}
+		*/	
 	}
 	//_iicf = 0;						//clr i2c interrupt flag 	
 }
@@ -108,7 +125,9 @@ DEFINE_ISR(I2C_ISR, 0x28)							//for V3 of compiler
 //___________________________________________________________________
 void i2c_manage(void)
 {
-	
-	
-	
+	if(i2c_rx_success) {
+		i2c_rx_success=0;
+		Port0 = rx_iic[0];
+		Port1 = rx_iic[1];		
+	}
 }
