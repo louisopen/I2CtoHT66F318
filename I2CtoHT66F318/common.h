@@ -19,6 +19,7 @@
 #include "I2C.h"
 #include "Sys_Init.h"
 //#include "Uart.h"
+//#include "bc7602.h"
 #include "Interrupt.h"
 
 #define TB0_int_flag	interrupt_flag.bits.b0
@@ -29,7 +30,6 @@
 #define toggle_buzzer	system_flag.bits.b1
 #define sleep_request	system_flag.bits.b2
 #define edge_int_flag	system_flag.bits.b3
-
 
 //PCF8574 P07~P00 => pa7~pa0  	(24pin/28pin) 
 //PCF8575 P07~P00 add P17~P10 => pb6~pb2,pc2~pc0 	(24pin/28pin)

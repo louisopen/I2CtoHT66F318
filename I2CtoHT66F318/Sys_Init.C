@@ -118,7 +118,9 @@ void WDT_ResetInit()	//WDT ·¸¥X´_¦ì
 	
 	TimerInitial();		//Timer n module
 	
-	init_i2c();			//I2C port	
+	init_i2c();			//I2C port
+	//fun_BLE_Module_Init();	//Init BLE4.2
+		
   	_nop();
   	//_pgc0 = 0;
 	//_pg0 = 0;
@@ -164,6 +166,7 @@ void ReadyToHalt()
 	//Uart_Init();			//UART port	
 	//Enable_ADC();			//ADC port	
 	init_i2c();				//I2C port	
+	//fun_BLE_Module_Init();	//Init BLE4.2
 }
 //HALT
 //SLEEPMode0	@(IDLEN==0  & LVDEN==Disable & WDT Disable )

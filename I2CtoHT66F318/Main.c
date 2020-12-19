@@ -13,6 +13,7 @@
 //___________________________________________________________________
 #include "common.h"
 
+//const uint16 __attribute((at(0x01FFF))) FW_Version[1]= {0x0210};
 unsigned char Port0, Port1;
 //___________________________________________________________________
 //___________________________________________________________________
@@ -36,6 +37,7 @@ void main()
 		_clrwdt();			//Clear Watchdog
 		//Uart_RXD_Manage();	//Received process/check
 		i2c_manage();		//Received process/check
+		//fun_BLE_Receive_Scan();
 		if(sleep_request)	//Enter sleep mode ?
 		{
  			ReadyToHalt();
